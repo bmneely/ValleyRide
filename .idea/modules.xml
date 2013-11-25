@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ValleyRide.iml" filepath="$PROJECT_DIR$/ValleyRide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ValleyRide/ValleyRide-ValleyRide.iml" filepath="$PROJECT_DIR$/ValleyRide/ValleyRide-ValleyRide.iml" />
+    </modules>
+  </component>
+</project>
+
