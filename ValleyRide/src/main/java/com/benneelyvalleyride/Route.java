@@ -36,25 +36,27 @@ public class Route {
 
     public int getRouteImageId() { return mRouteImageId; }
 
-    public ArrayList<String> getStopArrivalTmmesByStopID (UUID stopId){
+    public ArrayList<Integer> getStopArrivalTmmesByStopID (UUID stopId){
 
         for(Stop s : this.getInBoundStops()){
             if (s.getId() == stopId){
-                ArrayList<String> ret = new ArrayList<String>();
-                for (int i = 0; i < s.mArrivalTimes.size(); i++){
-                    ret.add(s.mArrivalTimes.get(i).toString());
-                }
-                return ret;
+                return s.mArrivalTimes;
+//                ArrayList<String> ret = new ArrayList<String>();
+//                for (int i = 0; i < s.mArrivalTimes.size(); i++){
+//                    ret.add(s.mArrivalTimes.get(i).toString());
+//                }
+//                return ret;
             }
         }
 
         for (Stop s : this.getOutBoundStops()){
             if (s.getId().equals(stopId)){
-                ArrayList<String> ret = new ArrayList<String>();
-                for (int i = 0; i < s.mArrivalTimes.size(); i++){
-                    ret.add(s.mArrivalTimes.get(i).toString());
-                }
-                return ret;
+                return s.mArrivalTimes;
+//                ArrayList<String> ret = new ArrayList<String>();
+//                for (int i = 0; i < s.mArrivalTimes.size(); i++){
+//                    ret.add(s.mArrivalTimes.get(i).toString());
+//                }
+//                return ret;
             }
         }
         return null;

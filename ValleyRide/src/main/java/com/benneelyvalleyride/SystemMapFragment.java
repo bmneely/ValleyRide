@@ -26,7 +26,6 @@ public class SystemMapFragment extends SupportMapFragment {
         mGoogleMap = getMap();
 
         if (savedInstanceState == null) {
-            mGoogleMap.setMyLocationEnabled(true);
             mGoogleMap.setMapType( GoogleMap.MAP_TYPE_NORMAL );
         }
 

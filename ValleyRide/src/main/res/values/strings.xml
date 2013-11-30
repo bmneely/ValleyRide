@@ -8,5 +8,7 @@
     <string name="title_in_bound_stops">In Bound</string>
     <string name="title_out_bound_stops">Out Bound</string>
     <string name="title_route_stops">Map</string>
+    <string name="title_arrival_times">Arrival Times</string>
+    <string name="title_other_routes">Other Buses</string>
 
 </resources>

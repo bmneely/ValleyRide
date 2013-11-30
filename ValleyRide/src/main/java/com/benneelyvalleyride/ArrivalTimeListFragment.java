@@ -1,13 +1,15 @@
 package com.benneelyvalleyride;
 
-import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import org.joda.time.*;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -16,7 +18,7 @@ import java.util.UUID;
  * Created by benneely on 11/17/13.
  */
 public class ArrivalTimeListFragment extends ListFragment {
-    private ArrayList<String> mArrivalTimes;
+    private ArrayList<Integer> mArrivalTimes;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -33,7 +35,7 @@ public class ArrivalTimeListFragment extends ListFragment {
 
         mArrivalTimes = r.getStopArrivalTmmesByStopID(id);
 
-        ArrivalTimesAdapter adapter = new ArrivalTimesAdapter(getActivity(), mArrivalTimes);
+        ArrivalTimesAdapter adapter = new ArrivalTimesAdapter(mArrivalTimes);
         setListAdapter(adapter);
     }
 
@@ -45,43 +47,28 @@ public class ArrivalTimeListFragment extends ListFragment {
     }
 
 
-    private class ArrivalTimesAdapter extends BaseAdapter {
-        private ArrayList<String> mTimes;
-        private LayoutInflater mInflater;
-
-
-        public ArrivalTimesAdapter (Context c, ArrayList<String> times){
-            mTimes = times;
-            mInflater = LayoutInflater.from(c);
+    private class ArrivalTimesAdapter extends ArrayAdapter<Integer> {
+        public ArrivalTimesAdapter(ArrayList<Integer> routes){
+            super(getActivity(), 0, routes);
         }
 
-        @Override
-        public int getCount() {
-            return mTimes.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return mTimes.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent){
             if(convertView == null) {
-                convertView = mInflater.inflate(R.layout.list_item_arrival_time, parent, false);
-                convertView.setTag(R.id.arrival_time_list_item, convertView.findViewById(R.id.arrival_time_list_item));
+                convertView = getActivity().getLayoutInflater().inflate(R.layout.list_item_arrival_time, null);
             }
 
-            String time = (String)getItem(position);
+            Integer time = getItem(position);
 
-            TextView arrivalTextView = (TextView)convertView.getTag(R.id.arrival_time_list_item);
-            arrivalTextView.setText(time);
+            DateTime dt = new DateTime();  // current time
 
+            TextView arrivalTextView = (TextView)convertView.findViewById(R.id.arrival_time_list_item);
+            arrivalTextView.setText(time.toString());
+            if (((time/100)*60+(time % 100)) < dt.getMinuteOfDay()){
+                arrivalTextView.setTextColor(Color.GRAY);
+
+            }
             return convertView;
         }
     }
