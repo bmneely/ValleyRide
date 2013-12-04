@@ -1,5 +1,9 @@
 package com.benneelyvalleyride;
 
+import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.LevelListDrawable;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -8,6 +12,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 import java.util.ArrayList;
 
@@ -38,21 +43,16 @@ public class SystemMapFragment extends SupportMapFragment {
 
             Route route = mRoutes.get(i);
 
-            for (int j = 0; j < route.getInBoundStops().size(); j++){
-                MarkerOptions markerOptions = new MarkerOptions();
-                markerOptions.position(route.getInBoundStops().get(j).mCordinate);
-                markerOptions.title(route.getInBoundStops().get(j).mStopName);
-                markerOptions.snippet(route.getInBoundStops().get(j).arrivalTimesToString());
-                markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
-                mGoogleMap.addMarker(markerOptions);
-            }
-
             for (int j = 0; j < route.getOutBoundStops().size(); j++){
                 MarkerOptions markerOptions = new MarkerOptions();
                 markerOptions.position(route.getOutBoundStops().get(j).mCordinate);
                 markerOptions.title(route.getOutBoundStops().get(j).mStopName);
-                markerOptions.snippet(route.getOutBoundStops().get(j).arrivalTimesToString());
-                markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+                markerOptions.snippet("Route " + route.getRouteNumber());
+                BitmapDrawable d=(BitmapDrawable) getResources().getDrawable(route.getRouteImageId());
+                Bitmap b=d.getBitmap();
+                Bitmap bhalfsize=Bitmap.createScaledBitmap(b, b.getWidth()/2,b.getHeight()/2, false);
+
+                markerOptions.icon(BitmapDescriptorFactory.fromBitmap(bhalfsize));
                 mGoogleMap.addMarker(markerOptions);
             }
          }
@@ -62,5 +62,4 @@ public class SystemMapFragment extends SupportMapFragment {
             mGoogleMap.animateCamera(CameraUpdateFactory.zoomTo(13), 2000, null);
         }
     }
-
 }

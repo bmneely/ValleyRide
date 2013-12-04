@@ -12,12 +12,12 @@ public class Route {
 
     public String mRouteName;
 
-    public int mRouterColor;
+    public float mRouterColor;
     public ArrayList<Stop> mOutBoundStops;
     public ArrayList<Stop> mInBoundStops;
     public int mRouteImageId;
 
-    public Route(int mRouteNumber, String mRouteName, int mRouterColor, int mRouteImageId, ArrayList<Stop> mOutBoundStops, ArrayList<Stop> mInBoundStops) {
+    public Route(int mRouteNumber, String mRouteName, float mRouterColor, int mRouteImageId, ArrayList<Stop> mOutBoundStops, ArrayList<Stop> mInBoundStops) {
         this.mRouteNumber = mRouteNumber;
         this.mRouteName = mRouteName;
         this.mRouteImageId = mRouteImageId;
@@ -39,24 +39,14 @@ public class Route {
     public ArrayList<Integer> getStopArrivalTmmesByStopID (UUID stopId){
 
         for(Stop s : this.getInBoundStops()){
-            if (s.getId() == stopId){
+            if (s.getId().equals(stopId)){
                 return s.mArrivalTimes;
-//                ArrayList<String> ret = new ArrayList<String>();
-//                for (int i = 0; i < s.mArrivalTimes.size(); i++){
-//                    ret.add(s.mArrivalTimes.get(i).toString());
-//                }
-//                return ret;
             }
         }
 
         for (Stop s : this.getOutBoundStops()){
             if (s.getId().equals(stopId)){
                 return s.mArrivalTimes;
-//                ArrayList<String> ret = new ArrayList<String>();
-//                for (int i = 0; i < s.mArrivalTimes.size(); i++){
-//                    ret.add(s.mArrivalTimes.get(i).toString());
-//                }
-//                return ret;
             }
         }
         return null;
@@ -83,11 +73,11 @@ public class Route {
         this.mRouteName = mRouteName;
     }
 
-    public int getRouterColor() {
+    public float getRouterColor() {
         return mRouterColor;
     }
 
-    public void setRouterColor(int mRouterColor) {
+    public void setRouterColor(float mRouterColor) {
         this.mRouterColor = mRouterColor;
     }
 

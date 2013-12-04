@@ -27,11 +27,8 @@ public class ArrivalTimeListFragment extends ListFragment {
         Route r  = Routes.get(getActivity()).getRouteByRouteNumber(getArguments().getInt(ShowStopsActivity.ROUTE_NUMBER, -1));
         UUID id = (UUID)getArguments().getSerializable(ShowStopsActivity.STOP_ID);
 
-        if (getArguments().getBoolean(ShowStopsActivity.OUT_BOUND)){
-            getActivity().setTitle(r.getStopById(id).getStopName() + " Arrival Times" );
-        } else {
-            getActivity().setTitle(r.getStopById(id).getStopName() + " Arrival Times" );
-        }
+
+        getActivity().setTitle(r.getStopById(id).getStopName());
 
         mArrivalTimes = r.getStopArrivalTmmesByStopID(id);
 
@@ -64,12 +61,37 @@ public class ArrivalTimeListFragment extends ListFragment {
             DateTime dt = new DateTime();  // current time
 
             TextView arrivalTextView = (TextView)convertView.findViewById(R.id.arrival_time_list_item);
-            arrivalTextView.setText(time.toString());
-            if (((time/100)*60+(time % 100)) < dt.getMinuteOfDay()){
+            arrivalTextView.setText(prettyUpMyTime(time));
+//            if (((time / 100) * 60 + (time % 100)) < dt.getMinuteOfDay()){
+            if (((time / 100) * 60 + (time % 100)) < 840){
                 arrivalTextView.setTextColor(Color.GRAY);
-
+            } else {
+                arrivalTextView.setTextColor(Color.BLACK);
             }
             return convertView;
+        }
+
+        private String prettyUpMyTime(int time){
+            int hours = time / 100;
+            String minutes;
+            int min = time % 100;
+
+            if (min < 10){
+                minutes = "0" + min;
+            } else {
+                minutes = min + "";
+            }
+
+            if ((hours / 13 == 1)){
+                return "  " + (hours - 12) + ":" + minutes + " PM";
+            }
+            else if (hours == 12){
+                return hours + ":" + minutes + " PM";
+            } else if (hours == 10 || hours == 11){
+                return hours + ":" + minutes + " AM";
+            } else {
+                return "  " + hours + ":" + minutes + " AM";
+            }
         }
     }
 }

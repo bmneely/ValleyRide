@@ -71,7 +71,6 @@ public class ShowArrivalTimesActivity extends FragmentActivity implements Action
                 case 0:
                     fragment = new ArrivalTimeListFragment();
                     args = new Bundle();
-                    args.putBoolean(ShowStopsActivity.OUT_BOUND, true);
                     args.putInt(ShowStopsActivity.ROUTE_NUMBER, getIntent().getIntExtra(ShowStopsActivity.ROUTE_NUMBER, 1));
                     args.putSerializable(ShowStopsActivity.STOP_ID, getIntent().getSerializableExtra(ShowStopsActivity.STOP_ID));
                     fragment.setArguments(args);
@@ -79,7 +78,6 @@ public class ShowArrivalTimesActivity extends FragmentActivity implements Action
                 case 1:
                     fragment = new ArrivalTimeListFragment();
                     args = new Bundle();
-                    args.putBoolean(ShowStopsActivity.OUT_BOUND, true);
                     args.putInt(ShowStopsActivity.ROUTE_NUMBER, getIntent().getIntExtra(ShowStopsActivity.ROUTE_NUMBER, 1));
                     args.putSerializable(ShowStopsActivity.STOP_ID, getIntent().getSerializableExtra(ShowStopsActivity.STOP_ID));
                     fragment.setArguments(args);
@@ -93,7 +91,7 @@ public class ShowArrivalTimesActivity extends FragmentActivity implements Action
 
         @Override
         public int getCount() {
-            return 2;
+            return 1;
         }
 
         @Override
