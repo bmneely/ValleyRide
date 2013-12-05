@@ -62,8 +62,8 @@ public class ArrivalTimeListFragment extends ListFragment {
 
             TextView arrivalTextView = (TextView)convertView.findViewById(R.id.arrival_time_list_item);
             arrivalTextView.setText(prettyUpMyTime(time));
-//            if (((time / 100) * 60 + (time % 100)) < dt.getMinuteOfDay()){
-            if (((time / 100) * 60 + (time % 100)) < 840){
+//            if (((time / 100) * 60 + (time % 100)) < 840){
+            if (((time / 100) * 60 + (time % 100)) < dt.getMinuteOfDay()){
                 arrivalTextView.setTextColor(Color.GRAY);
             } else {
                 arrivalTextView.setTextColor(Color.BLACK);
