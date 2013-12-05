@@ -10,10 +10,10 @@ import java.util.UUID;
 public class Stop {
 
     private UUID mId;
-
     public String mStopName;
     public LatLng mCordinate;
     public ArrayList<Integer> mArrivalTimes;
+
     public Stop(String mStopName, LatLng mCordinate, ArrayList<Integer> mArrivalTimes){
         this.mId = UUID.randomUUID();
         this.mStopName = mStopName;

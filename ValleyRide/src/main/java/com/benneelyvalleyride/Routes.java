@@ -23,7 +23,7 @@ public class Routes {
         this.geocoder = new Geocoder(appContext);
         this.mAppContext = appContext;
         mRoutes = new ArrayList<Route>();
-        mRoutes.add(new Route( 1, "Parkcenter", Color.parseColor("#FBCF34"), R.drawable.route_1_icon,
+        mRoutes.add(new Route( 1, "Parkcenter", Color.parseColor("#FBCF34"), R.drawable.route_1_icon, R.drawable.route_1_map,
                 new ArrayList<Stop>()
                 {{
                     add(new Stop( "Zone 1 Idaho & 8th", new LatLng(43.616105,-116.202049), new ArrayList<Integer>()
@@ -50,7 +50,7 @@ public class Routes {
                         {{ add(610); add(710); add(740); add(810); add(840); add(910); add(940); add(1040); add(1140); add(1240); add(1340); add(1440); add(1540); add(1610); add(1640); add(1710); add(1740); add(1810); add(1840); }} ));
                 }}
         ));
-        mRoutes.add(new Route( 2, "Broadway", Color.parseColor("#4F67AA"), R.drawable.route_2_icon,
+        mRoutes.add(new Route( 2, "Broadway", Color.parseColor("#4F67AA"), R.drawable.route_2_icon, R.drawable.route_2_map,
                 new ArrayList<Stop>()
                 {{
                     add(new Stop( "Zone 3 Main & 8th", new LatLng(43.615023,-116.202498), new ArrayList<Integer>()
@@ -77,7 +77,7 @@ public class Routes {
                         {{ add(632); add(732); add(832); add(932); add(1032); add(1132); add(1232); add(1332); add(1432); add(1532); add(1632); add(1732); add(1832); }} ));
                 }}
         ));
-        mRoutes.add(new Route( 3, "Vista", Color.parseColor("#EE9C3F"), R.drawable.route_3_icon,
+        mRoutes.add(new Route( 3, "Vista", Color.parseColor("#EE9C3F"), R.drawable.route_3_icon, R.drawable.route_3_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Zone 1 Idaho & 8th", new LatLng(43.616105,-116.202049), new ArrayList<Integer>()
                         {{ add(620); add(640); add(700); add(720); add(740); add(800); add(820); add(840); add(920); add(1000); add(1040); add(1120); add(1200); add(1320); add(1400); add(1420); add(1520); add(1600); add(1620); add(1640); add(1700); add(1720); add(1740); add(1800); add(1820); }} ));
@@ -103,7 +103,7 @@ public class Routes {
                         {{ add(610); add(630); add(650); add(710); add(730); add(750); add(810); add(830); add(910); add(950); add(1030); add(1110); add(1150); add(1230); add(1310); add(1350); add(1430); add(1510); add(1550); add(1610); add(1630); add(1650); add(1710); add(1730); add(1750); add(1810); }} ));
                 }}
         ));
-        mRoutes.add(new Route( 4, "Roosevelt", Color.parseColor("#44AED5"), R.drawable.route_4_icon,
+        mRoutes.add(new Route( 4, "Roosevelt", Color.parseColor("#44AED5"), R.drawable.route_4_icon, R.drawable.route_4_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Zone 3 Main & 8th", new LatLng(43.615023,-116.202498), new ArrayList<Integer>()
                         {{ add(645); add(715); add(745); add(815); add(845); add(945); add(1045); add(1145); add(1245); add(1345); add(1445); add(1515); add(1545); add(1615); add(1645); add(1715); add(1745); add(1815); add(1845); }} ));
@@ -133,7 +133,7 @@ public class Routes {
                         {{ add(635); add(705); add(735); add(805); add(835); add(905); add(935); add(1035); add(1135); add(1235); add(1335); add(1435); add(1535); add(1604); add(1635); add(1705); add(1735); add(1805); add(1835); }} ));
                 }}
         ));
-        mRoutes.add(new Route( 5, "Emerald", Color.parseColor("#822617"), R.drawable.route_5_icon,
+        mRoutes.add(new Route( 5, "Emerald", Color.parseColor("#822617"), R.drawable.route_5_icon, R.drawable.route_5_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Zone 1 Idaho & 8th", new LatLng(43.616105,-116.202049), new ArrayList<Integer>()
                         {{ add(615); add(645); add(715); add(745); add(815); add(845); add(945); add(1045); add(1145); add(1245); add(1345); add(1445); add(1515); add(1545); add(1615); add(1645); add(1715); add(1745); add(1845); }} ));
@@ -159,7 +159,7 @@ public class Routes {
                         {{ add(631); add(701); add(731); add(801); add(831); add(901); add(931); add(1031); add(1131); add(1231); add(1331); add(1431); add(1531); add(1601); add(1631); add(1701); add(1731); add(1801); add(1831); }} ));
                 }}
         ));
-        mRoutes.add(new Route( 6, "Orchard", Color.parseColor("#2780C0"), R.drawable.route_6_icon,
+        mRoutes.add(new Route( 6, "Orchard", Color.parseColor("#2780C0"), R.drawable.route_6_icon, R.drawable.route_6_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Zone 1 Idaho & 8th", new LatLng(43.616105,-116.202049), new ArrayList<Integer>()
                         {{ add(615); add(645); add(715); add(745); add(815); add(845); add(945); add(1045); add(1145); add(1245); add(1345); add(1445); add(1515); add(1545); add(1615); add(1645); add(1715); add(1755); add(1815); add(1845); }} ));
@@ -189,7 +189,7 @@ public class Routes {
                         {{ add(705); add(735); add(805); add(835); add(905); add(935); add(1035); add(1135); add(1235); add(1335); add(1435); add(1535); add(1605); add(1635); add(1705); add(1735); add(1805); add(1835); add(1905); add(1935); }} ));
                 }}
         ));
-        mRoutes.add(new Route( 7, "Fairview", Color.parseColor("#DC86B1"), R.drawable.route_7_icon,
+        mRoutes.add(new Route( 7, "Fairview", Color.parseColor("#DC86B1"), R.drawable.route_7_icon, R.drawable.route_7_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Zone 1 Idaho & 8th", new LatLng(43.616105,-116.202049), new ArrayList<Integer>()
                         {{ add(540); add(620); add(700); add(740); add(820); add(900); add(940); add(1020); add(1100); add(1140); add(1220); add(1300); add(1340); add(1420); add(1500); add(1540); add(1620); add(1700); add(1740); add(1820); }} ));
@@ -219,7 +219,7 @@ public class Routes {
                         {{ add(655); add(735); add(815); add(855); add(935); add(1015); add(1055); add(1135); add(1215); add(1250); add(1335); add(1415); add(1455); add(1540); add(1615); add(1655); add(1735); add(1815); add(1855); }} ));
                 }}
         ));
-        mRoutes.add(new Route( 8, "Chinden - Five Mile", Color.parseColor("#368897"), R.drawable.route_8_icon,
+        mRoutes.add(new Route( 8, "Chinden - Five Mile", Color.parseColor("#368897"), R.drawable.route_8_icon, R.drawable.route_8_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Zone 2 Main & 9th", new LatLng(43.61622,-116.204679), new ArrayList<Integer>()
                         {{ add(720); add(740); add(840); add(900); add(1000); add(1120); add(1240); add(1400); add(1440); add(1520); add(1600); add(1640); }} ));
@@ -245,7 +245,7 @@ public class Routes {
                         {{ add(834); add(854); add(954); add(1001); add(1114); add(1234); add(1354); add(1514); add(1554); add(1634); add(1714); add(1754); }} ));
                 }}
         ));
-        mRoutes.add(new Route( 9, "State Street", Color.parseColor("#105BA2"), R.drawable.route_9_icon,
+        mRoutes.add(new Route( 9, "State Street", Color.parseColor("#105BA2"), R.drawable.route_9_icon, R.drawable.route_9_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Zone 2 Main & 9th", new LatLng(43.61622,-116.204679), new ArrayList<Integer>()
                         {{ add(515); add(545); add(615); add(645); add(715); add(745); add(815); add(845); add(915); add(945); add(1015); add(1045); add(1115); add(1145); add(1215); add(1245); add(1315); add(1345); add(1415); add(1445); add(1515); add(1545); add(1615); add(1645); add(1715); add(1745); add(1815); }} ));
@@ -271,7 +271,7 @@ public class Routes {
                         {{ add(605); add(635); add(705); add(735); add(805); add(835); add(905); add(935); add(1005); add(1035); add(1105); add(1135); add(1205); add(1235); add(1259); add(1335); add(1405); add(1435); add(1505); add(1535); add(1559); add(1635); add(1705); add(1735); add(1805); add(1835); add(1905); }} ));
                 }}
         ));
-        mRoutes.add(new Route( 10, "Hill Road - Maple Grove", Color.parseColor("#F3B36A"), R.drawable.route_10_icon,
+        mRoutes.add(new Route( 10, "Hill Road - Maple Grove", Color.parseColor("#F3B36A"), R.drawable.route_10_icon, R.drawable.route_10_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Zone 2 Main & 9th", new LatLng(43.61622,-116.204679), new ArrayList<Integer>()
                         {{ add(545); add(645); add(745); add(845); add(945); add(1045); add(1145); add(1245); add(1345); add(1445); add(1545); add(1645); add(1745); }} ));
@@ -317,7 +317,7 @@ public class Routes {
                         {{ add(740); add(840); add(940); add(1040); add(1140); add(1240); add(1340); add(1440); add(1540); add(1640); add(1740); add(1840); add(1940); }} ));
                 }}
         ));
-        mRoutes.add(new Route( 11, "Garden City", Color.parseColor("#C43E4E"), R.drawable.route_11_icon,
+        mRoutes.add(new Route( 11, "Garden City", Color.parseColor("#C43E4E"), R.drawable.route_11_icon, R.drawable.route_11_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Zone 2 Main & 9th", new LatLng(43.61622,-116.204679), new ArrayList<Integer>()
                         {{ add(945); add(1045); add(1145); add(1245); add(1345); add(1445); }} ));
@@ -337,7 +337,7 @@ public class Routes {
 
                 }}
         ));
-        mRoutes.add(new Route( 14, "Hyde Park", Color.parseColor("#CD9E66"), R.drawable.route_14_icon,
+        mRoutes.add(new Route( 14, "Hyde Park", Color.parseColor("#CD9E66"), R.drawable.route_14_icon, R.drawable.route_14_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Zone 2 Main & 9th", new LatLng(43.61622,-116.204679), new ArrayList<Integer>()
                         {{ add(545); add(615); add(645); add(715); add(745); add(815); add(845); add(915); add(1015); add(1115); add(1215); add(1315); add(1415); add(1515); add(1545); add(1615); add(1645); add(1715); add(1745); add(1815); }} ));
@@ -356,7 +356,7 @@ public class Routes {
 
                 }}
         ));
-        mRoutes.add(new Route( 16, "VA Shuttle", Color.parseColor("#A46722"), R.drawable.route_16_icon,
+        mRoutes.add(new Route( 16, "VA Shuttle", Color.parseColor("#A46722"), R.drawable.route_16_icon, R.drawable.route_16_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Zone 3 Main & 8th", new LatLng(43.615023,-116.202498), new ArrayList<Integer>()
                         {{ add(615); add(715); add(815); add(915); add(1015); add(1115); add(1215); add(1315); add(1415); add(1515); add(1615); add(1715); add(1815); }} ));
@@ -374,7 +374,7 @@ public class Routes {
                         {{ add(640); add(740); add(840); add(940); add(1040); add(1140); add(1240); add(1340); add(1440); add(1540); add(1640); add(1740); add(1840); }} ));
                 }}
         ));
-        mRoutes.add(new Route( 17, "Warm Springs", Color.parseColor("#A46722"), R.drawable.route_17_icon,
+        mRoutes.add(new Route( 17, "Warm Springs", Color.parseColor("#A46722"), R.drawable.route_17_icon, R.drawable.route_17_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Zone 3 Main & 8th", new LatLng(43.615023,-116.202498), new ArrayList<Integer>()
                         {{ add(645); add(745); add(845); add(945); add(1045); add(1145); add(1245); add(1345); add(1445); add(1545); add(1645); add(1745); }} ));
@@ -393,7 +393,7 @@ public class Routes {
 
                 }}
         ));
-        mRoutes.add(new Route( 28, "Cole - Victory", Color.parseColor("#4E1B4E"), R.drawable.route_28_icon,
+        mRoutes.add(new Route( 28, "Cole - Victory", Color.parseColor("#4E1B4E"), R.drawable.route_28_icon, R.drawable.route_28_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Town Square Mall P&R", new LatLng(43.577138,-116.213631), new ArrayList<Integer>()
                         {{ add(740); add(843); add(943); add(1043); add(1143); add(1243); add(1343); add(1443); add(1543); add(1643); add(1743); add(1843); }} ));
@@ -415,7 +415,7 @@ public class Routes {
                         {{ add(736); add(836); add(936); add(1036); add(1136); add(1236); add(1336); add(1436); add(1536); add(1636); add(1736); add(1836); }} ));
                 }}
         ));
-        mRoutes.add(new Route( 29, "Overland", Color.parseColor("#4AA04E"), R.drawable.route_29_icon,
+        mRoutes.add(new Route( 29, "Overland", Color.parseColor("#4AA04E"), R.drawable.route_29_icon, R.drawable.route_29_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "BSU Admin. Building", new LatLng(43.603102,-116.204923), new ArrayList<Integer>()
                         {{ add(645); add(715); add(745); add(815); add(845); add(915); add(1015); add(1115); add(1215); add(1315); add(1415); add(1515); add(1545); add(1615); add(1645); add(1715); add(1745); add(1815); add(1845); }} ));

@@ -16,14 +16,16 @@ public class Route {
     public ArrayList<Stop> mOutBoundStops;
     public ArrayList<Stop> mInBoundStops;
     public int mRouteImageId;
+    public int mRouteMapId;
 
-    public Route(int mRouteNumber, String mRouteName, float mRouterColor, int mRouteImageId, ArrayList<Stop> mOutBoundStops, ArrayList<Stop> mInBoundStops) {
+    public Route(int mRouteNumber, String mRouteName, float mRouterColor, int mRouteImageId, int mRouteMapId, ArrayList<Stop> mOutBoundStops, ArrayList<Stop> mInBoundStops) {
         this.mRouteNumber = mRouteNumber;
         this.mRouteName = mRouteName;
         this.mRouteImageId = mRouteImageId;
         this.mRouterColor = mRouterColor;
         this.mOutBoundStops = mOutBoundStops;
         this.mInBoundStops = mInBoundStops;
+        this.mRouteMapId = mRouteMapId;
     }
 
     public String getRouteName() {
@@ -33,6 +35,8 @@ public class Route {
     public int getRouteNumber() {
         return mRouteNumber;
     }
+
+    public int getRouteMapId() { return mRouteMapId; }
 
     public int getRouteImageId() { return mRouteImageId; }
 
