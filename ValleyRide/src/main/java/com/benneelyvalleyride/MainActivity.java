@@ -64,10 +64,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             Fragment fragment;
             switch (position) {
                 case 0:
-                    fragment = new RouteListFragment();
+                    fragment = new SystemMapFragment();
                     break;
                 case 1:
-                    fragment = new SystemMapFragment();
+                    fragment = new RouteListFragment();
                     break;
                 default:
                     fragment = null;
@@ -85,9 +85,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             Locale l = Locale.getDefault();
             switch (position) {
                 case 0:
-                    return getString(R.string.title_stops).toUpperCase(l);
-                case 1:
                     return getString(R.string.title_route_map).toUpperCase(l);
+                case 1:
+                    return getString(R.string.title_stops).toUpperCase(l);
             }
             return null;
         }

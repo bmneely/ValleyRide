@@ -76,7 +76,7 @@ public class ShowArrivalTimesActivity extends FragmentActivity implements Action
                     fragment.setArguments(args);
                     break;
                 case 1:
-                    fragment = new ArrivalTimeListFragment();
+                    fragment = new StopMapFragment();
                     args = new Bundle();
                     args.putInt(ShowStopsActivity.ROUTE_NUMBER, getIntent().getIntExtra(ShowStopsActivity.ROUTE_NUMBER, 1));
                     args.putSerializable(ShowStopsActivity.STOP_ID, getIntent().getSerializableExtra(ShowStopsActivity.STOP_ID));
@@ -91,7 +91,7 @@ public class ShowArrivalTimesActivity extends FragmentActivity implements Action
 
         @Override
         public int getCount() {
-            return 1;
+            return 2;
         }
 
         @Override
@@ -101,7 +101,7 @@ public class ShowArrivalTimesActivity extends FragmentActivity implements Action
                 case 0:
                     return getString(R.string.title_arrival_times).toUpperCase(l);
                 case 1:
-                    return getString(R.string.title_other_routes).toUpperCase(l);
+                    return getString(R.string.title_stop_map).toUpperCase(l);
             }
             return null;
         }

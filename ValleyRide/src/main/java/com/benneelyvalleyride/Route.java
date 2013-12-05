@@ -8,15 +8,13 @@ import java.util.UUID;
  */
 public class Route {
 
-    public int mRouteNumber;
-
-    public String mRouteName;
-
-    public float mRouterColor;
-    public ArrayList<Stop> mOutBoundStops;
-    public ArrayList<Stop> mInBoundStops;
-    public int mRouteImageId;
-    public int mRouteMapId;
+    private int mRouteNumber;
+    private String mRouteName;
+    private float mRouterColor;
+    private ArrayList<Stop> mOutBoundStops;
+    private ArrayList<Stop> mInBoundStops;
+    private int mRouteImageId;
+    private int mRouteMapId;
 
     public Route(int mRouteNumber, String mRouteName, float mRouterColor, int mRouteImageId, int mRouteMapId, ArrayList<Stop> mOutBoundStops, ArrayList<Stop> mInBoundStops) {
         this.mRouteNumber = mRouteNumber;
@@ -44,13 +42,13 @@ public class Route {
 
         for(Stop s : this.getInBoundStops()){
             if (s.getId().equals(stopId)){
-                return s.mArrivalTimes;
+                return s.getArrivalTimes();
             }
         }
 
         for (Stop s : this.getOutBoundStops()){
             if (s.getId().equals(stopId)){
-                return s.mArrivalTimes;
+                return s.getArrivalTimes();
             }
         }
         return null;

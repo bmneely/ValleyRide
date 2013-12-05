@@ -10,5 +10,6 @@
     <string name="title_route_stops">Map</string>
     <string name="title_arrival_times">Arrival Times</string>
     <string name="title_other_routes">Other Buses</string>
+    <string name="title_stop_map">Map</string>
 
 </resources>

@@ -27,9 +27,9 @@ public class StopListFragment extends ListFragment {
         View v = inflater.inflate(R.layout.list_view_container, container, false);
 
         if (getArguments().getBoolean(ShowStopsActivity.OUT_BOUND)){
-            mStops = Routes.get(getActivity()).getRouteByRouteNumber(getArguments().getInt(ShowStopsActivity.ROUTE_NUMBER)).mOutBoundStops;
+            mStops = Routes.get(getActivity()).getRouteByRouteNumber(getArguments().getInt(ShowStopsActivity.ROUTE_NUMBER)).getOutBoundStops();
         }else {
-            mStops = Routes.get(getActivity()).getRouteByRouteNumber(getArguments().getInt(ShowStopsActivity.ROUTE_NUMBER)).mInBoundStops;
+            mStops = Routes.get(getActivity()).getRouteByRouteNumber(getArguments().getInt(ShowStopsActivity.ROUTE_NUMBER)).getInBoundStops();
         }
 
         adapter = new StopAdapter(mStops);

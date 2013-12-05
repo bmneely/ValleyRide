@@ -13,7 +13,7 @@ import java.util.UUID;
  * Created by benneely on 11/12/13.
  */
 public class Routes {
-    public ArrayList<Route> mRoutes;
+    private ArrayList<Route> mRoutes;
     private static Routes sRoutes;
     private Context mAppContext;
     private Geocoder geocoder;
