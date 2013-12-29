@@ -441,6 +441,182 @@ public class Routes {
                         {{ add(705); add(735); add(805); add(835); add(905); add(935); add(1035); add(1135); add(1235); add(1335); add(1435); add(1535); add(1605); add(1635); add(1700); add(1735); add(1800); add(1835); add(1850); }} ));
                 }}
         ));
+		mRoutes.add(new Route( 40, "Meridian Express", Color.parseColor("#4AA04E"), R.drawable.route_40_icon, R.drawable.route_40_map,
+                new ArrayList<Stop>() {{
+                    add(new Stop( "Happy Day Transit Center", new LatLng(43.627012,-116.634944), new ArrayList<Integer>()
+                        {{ add(520); add(555); add(625); add(655); add(1440); add(1510); add(1540); }} ));
+                    add(new Stop( "CWI P&R", new LatLng(43.614984,-116.507178), new ArrayList<Integer>()
+                        {{ add(543); add(618); add(648); add(718); add(1503); add(1533); add(1603); add(1639); }} ));
+                    add(new Stop( "Country Terrace P&R", new LatLng(43.591558,-116.392537), new ArrayList<Integer>()
+                        {{ add(558); add(633); add(703); add(733); add(1516); add(1546); add(1616); add(1652); }} ));
+                    add(new Stop( "Main & 9th", new LatLng(43.61626,-116.204683), new ArrayList<Integer>()
+                        {{ add(618); add(653); add(723); add(753); add(1536); add(1606); add(1636); add(1712); }} ));
+                    add(new Stop( "Main & 1st", new LatLng(43.611531,-116.195482), new ArrayList<Integer>()
+                        {{ add(622); add(627); add(727); add(757); add(1540); add(1610); add(1640); add(1716); }} ));
+					add(new Stop( "BSU Admin. Building", new LatLng(43.6031,-116.204915), new ArrayList<Integer>()
+						{{ add(629); add(704); add(734); add(804); add(1547); add(1617); add(1647); add(1723); add(1639); }} ));
+                }},
+				new ArrayList<Stop>() {{
+                    add(new Stop( "University & Joyce", new LatLng(43.6031,-116.204915), new ArrayList<Integer>()
+                        {{ add(712); add(742); add(812); add(1555); add(1625); add(1655); add(1731); }} ));
+                    add(new Stop( "Idaho & 1st", new LatLng(43.61204,-116.194503), new ArrayList<Integer>()
+                        {{ add(719); add(749); add(819); add(1602); add(1632); add(1702); add(1738); }} ));
+                    add(new Stop( "Idaho & 8th", new LatLng(43.616528,-116.202936), new ArrayList<Integer>()
+                        {{ add(723); add(753); add(823); add(1606); add(1636); add(1706); add(1742); }} ));
+                    add(new Stop( "Country Terrace P&R", new LatLng(43.591558,-116.392537), new ArrayList<Integer>()
+                        {{ add(743); add(813); add(843); add(1626); add(1656); add(1726); add(1802); }} ));
+                    add(new Stop( "CWI P&R", new LatLng(43.614984,-116.507178), new ArrayList<Integer>()
+                        {{ add(758); add(828); add(858); add(1639); add(1709); add(1739); add(1815); }} ));
+					add(new Stop( "Happy Day Transit Center", new LatLng(43.627012,-116.634944), new ArrayList<Integer>()
+                        {{ add(819); add(849); add(919); add(1730); add(1800); add(1836); }} ));
+                }}
+        ));
+		mRoutes.add(new Route( 42, "", Color.parseColor("#4AA04E"), R.drawable.route_40_icon, R.drawable.route_40_map,
+                new ArrayList<Stop>() {{
+                    add(new Stop( "Happy Day Transit Center", new LatLng(43.627012,-116.634944), new ArrayList<Integer>()
+                        {{ add(630); add(730); add(1530); }} ));
+                    add(new Stop( "College of Western Idaho", new LatLng(43.614984,-116.507178), new ArrayList<Integer>()
+                        {{ add(646); add(746); add(916); add(1046); add(1246); add(1446); add(1546); add(1716); }} ));
+                    add(new Stop( "Progress & Corporate", new LatLng(43.598937,-116.390604), new ArrayList<Integer>()
+                        {{ add(700); add(800); add(930); add(1100); add(1300); add(1500); add(1600); add(1730); }} ));
+					add(new Stop( "Franklin and Eagle", new LatLng(43.604798,-116.355187), new ArrayList<Integer>()
+                        {{ add(715); add(815); add(945); add(1115); add(1315); add(1515); add(1615); add(1745); }} ));
+					add(new Stop( "Overland & Silverstone", new LatLng(43.590472,-116.349457), new ArrayList<Integer>()
+                        {{ add(722); add(822); add(952); add(1122); add(1322); add(1522); add(1622); add(1752); }} ));
+					add(new Stop( "Overland & Clear Creek", new LatLng(43.590148,-116.317172), new ArrayList<Integer>()
+                        {{ add(724); add(824); add(952); add(1124); add(1322); add(1524); add(1624); add(1754); }} ));
+					add(new Stop( "Maple Grove & Overland", new LatLng(43.590476,-116.29425), new ArrayList<Integer>()
+                        {{ add(729); add(829); add(959); add(1129); add(1329); add(1529); add(1629); add(1759); }} ));
+					add(new Stop( "Towne Square Mall P&R", new LatLng(43.610876,-116.276532), new ArrayList<Integer>()
+                        {{ add(735); add(835); add(1005); add(1135); add(1335); add(1535); add(1635); add(1805); }} ));
+                    add(new Stop( "Main & 9th", new LatLng(43.61626,-116.204683), new ArrayList<Integer>()
+                        {{ add(750); add(850); add(450); }} ));
+                    add(new Stop( "Main & 1st", new LatLng(43.611531,-116.195482), new ArrayList<Integer>()
+                        {{ add(752); add(852); add(452); }} ));
+					add(new Stop( "BSU Admin. Building", new LatLng(43.6031,-116.204915), new ArrayList<Integer>()
+						{{ add(758); add(858); add(458); }} ));
+                }},
+				new ArrayList<Stop>() {{
+                    add(new Stop( "University & Joyce", new LatLng(43.6031,-116.204915), new ArrayList<Integer>()
+                        {{ add(807); add(907); add(1707); }} ));
+                    add(new Stop( "Idaho & 1st", new LatLng(43.61204,-116.194503), new ArrayList<Integer>()
+                        {{ add(813); add(913); add(1513); }} ));
+                    add(new Stop( "Idaho & 8th", new LatLng(43.616528,-116.202936), new ArrayList<Integer>()
+                        {{ add(815); add(915); add(1515); }} ));
+					add(new Stop( "Towne Square Mall P&R", new LatLng(43.610876,-116.276532), new ArrayList<Integer>()
+                        {{ add(830); add(930); add(1015); add(1145); add(1345); add(1545); add(1730); add(1815); }} ));
+                    add(new Stop( "Maple Grove & Overland", new LatLng(43.590476,-116.29425), new ArrayList<Integer>()
+                        {{ add(838); add(938); add(1024); add(1154); add(1358); add(1558); add(1742); add(1828); }} ));
+					add(new Stop( "Overland & Clear Creek", new LatLng(43.590361,-116.316926), new ArrayList<Integer>()
+                        {{ add(842); add(942); add(1028); add(1158); add(1358); add(1558); add(1742); add(1828); }} ));
+					add(new Stop( "Overland & Silverstone", new LatLng(43.590472,-116.349457), new ArrayList<Integer>()
+                        {{ add(845); add(945); add(1031); add(1201); add(1401); add(1601); add(1745); add(1831); }} ));
+					add(new Stop( "Franklin and Eagle", new LatLng(43.604798,-116.355187), new ArrayList<Integer>()
+                        {{ add(850); add(950); add(1036); add(1206); add(1406); add(1606); add(1750); add(1836); }} ));
+					add(new Stop( "Progress & Corporate", new LatLng(43.598937,-116.390604), new ArrayList<Integer>()
+                        {{ add(901); add(1001); add(1047); add(1217); add(1417); add(1617); add(1801); add(1847); }} ));
+                    add(new Stop( "College of Western Idaho", new LatLng(43.614984,-116.507178), new ArrayList<Integer>()
+                        {{ add(915); add(1015); add(1101); add(1231); add(1431); add(1631); add(1815); add(1901); }} ));
+					add(new Stop( "Happy Day Transit Center", new LatLng(43.627012,-116.634944), new ArrayList<Integer>()
+                        {{ add(1831); add(1917); }} ));
+                }}
+        ));
+		mRoutes.add(new Route( 43, "Caldwell Express", Color.parseColor("#4AA04E"), R.drawable.route_43_icon, R.drawable.route_43_map,
+                new ArrayList<Stop>() {{
+                    add(new Stop( "10th & Larkspur Ct.", new LatLng(43.640556,-116.693184), new ArrayList<Integer>()
+                        {{ add(630); add(700); }} ));
+                    add(new Stop( "Franklin Rd P&R", new LatLng(43.610876,-116.276532), new ArrayList<Integer>()
+                        {{ add(639); add(709); }} ));
+                    add(new Stop( "Main & 9th", new LatLng(43.61626,-116.204683), new ArrayList<Integer>()
+                        {{ add(712); add(742); }} ));
+                    add(new Stop( "Main & 1st", new LatLng(43.611531,-116.195482), new ArrayList<Integer>()
+                        {{ add(716); add(746); }} ));
+                    add(new Stop( "BSU Admin Building", new LatLng(43.6031,-116.204915), new ArrayList<Integer>()
+                        {{ add(723); add(753); }} ));
+					add(new Stop( "University and Brady", new LatLng(43.604673,-116.2081), new ArrayList<Integer>()
+						{{ add(730); add(800); }} ));
+                }},
+				new ArrayList<Stop>() {{
+                    add(new Stop( "University and Earle", new LatLng(43.60492,-116.209688), new ArrayList<Integer>()
+                        {{ add(1640); add(1710); }} ));
+                    add(new Stop( "University & Joyce", new LatLng(43.6031,-116.204915), new ArrayList<Integer>()
+                        {{ add(1644); add(1714); }} ));
+                    add(new Stop( "Idaho & 1st", new LatLng(43.61204,-116.194503), new ArrayList<Integer>()
+                        {{ add(1651); add(1721); }} ));
+                    add(new Stop( "Idaho & 8th", new LatLng(43.616528,-116.202936), new ArrayList<Integer>()
+                        {{ add(1656); add(1725); }} ));
+                    add(new Stop( "Franklin Rd P&R", new LatLng(43.610876,-116.276532), new ArrayList<Integer>()
+                        {{ add(1729); add(1759); }} ));
+					add(new Stop( "10th & Larkspur Ct.", new LatLng(43.640556,-116.693184), new ArrayList<Integer>()
+						{{ add(1737); add(1800); }} ));
+                }}
+        ));
+		mRoutes.add(new Route( 44, "Hwy. 44 Express", Color.parseColor("#4AA04E"), R.drawable.route_44_icon, R.drawable.route_44_map,
+                new ArrayList<Stop>() {{
+                    add(new Stop( "Happy Day Transit Center", new LatLng(43.627012,-116.634944), new ArrayList<Integer>()
+                        {{ add(620); }} ));
+					add(new Stop( "Franklin Rd P&R", new LatLng(43.610876,-116.276532), new ArrayList<Integer>()
+						{{ add(630); }} ));
+					add(new Stop( "Middleton Fine Arts Center", new LatLng(43.706381,-116.624902), new ArrayList<Integer>()
+						{{ add(644); }} ));
+					add(new Stop( "LifeSpring Christian Church", new LatLng(43.693088,-116.493123), new ArrayList<Integer>()
+						{{ add(657); }} ));
+					add(new Stop( "Eagle Riverside", new LatLng(43.68819,-116.335902), new ArrayList<Integer>()
+						{{ add(711); }} ));
+					add(new Stop( "32nd & State Street", new LatLng(43.635374,-116.228692), new ArrayList<Integer>()
+						{{ add(733); }} ));
+					add(new Stop( "Main & 9th", new LatLng(43.61626,-116.204683), new ArrayList<Integer>()
+						{{ add(745); }} ));
+					add(new Stop( "Park and Broadway", new LatLng(43.606415,-116.19359), new ArrayList<Integer>()
+						{{ add(749); }} ));
+					add(new Stop( "BSU Admin Building", new LatLng(43.6031,-116.204915), new ArrayList<Integer>()
+						{{ add(755); }} ));
+					add(new Stop( "University and Brady", new LatLng(43.604673,-116.2081), new ArrayList<Integer>()
+						{{ add(800); }} ));
+                }},
+				new ArrayList<Stop>() {{
+					add(new Stop( "University and Earle", new LatLng(43.60492,-116.209688), new ArrayList<Integer>()
+						{{ add(505); }} ));
+					add(new Stop( "University & Joyce", new LatLng(43.6031,-116.204915), new ArrayList<Integer>()
+						{{ add(510); }} ));
+					add(new Stop( "Park and Broadway", new LatLng(43.606415,-116.19359), new ArrayList<Integer>()
+						{{ add(514); }} ));
+					add(new Stop( "Idaho & 8th", new LatLng(43.616528,-116.202936), new ArrayList<Integer>()
+						{{ add(518); }} ));
+					add(new Stop( "33rd & State Street", new LatLng(43.636199,-116.22944), new ArrayList<Integer>()
+						{{ add(529); }} ));
+					add(new Stop( "Eagle Riverside", new LatLng(43.68819,-116.335902), new ArrayList<Integer>()
+						{{ add(545); }} ));
+					add(new Stop( "LifeSpring Christian Church", new LatLng(43.693088,-116.493123), new ArrayList<Integer>()
+						{{ add(606); }} ));
+					add(new Stop( "Middleton Fine Arts Center", new LatLng(43.706381,-116.624902), new ArrayList<Integer>()
+						{{ add(617); }} ));
+					add(new Stop( "Franklin Rd P&R", new LatLng(43.610876,-116.276532), new ArrayList<Integer>()
+						{{ add(630); }} ));
+					add(new Stop( "Happy Day Transit Center", new LatLng(43.627012,-116.634944), new ArrayList<Integer>()
+                        {{ add(640); }} ));
+                }}
+        ));
+		mRoutes.add(new Route( 45, "BSU Express", Color.parseColor("#4AA04E"), R.drawable.route_45_icon, R.drawable.route_45_map,
+                new ArrayList<Stop>() {{
+                    add(new Stop( "College of Western Idaho", new LatLng(43.614984,-116.507178), new ArrayList<Integer>()
+                        {{ add(900); add(1000); add(1300); add(1400); add(1600); add(1730); add(1900); }} ));
+                    add(new Stop( "Myrtle & 9th", new LatLng(43.61323,-116.207811), new ArrayList<Integer>()
+                        {{ add(920); add(1020); add(1320); add(1420); add(1620); add(1750); add(1920); }} ));
+					add(new Stop( "BSU Admin. Building", new LatLng(43.6031,-116.204915), new ArrayList<Integer>()
+						{{ add(925); add(1025); add(1325); add(1425); add(1625); add(1755); add(1925); }} ));
+                }},
+				new ArrayList<Stop>() {{
+                    add(new Stop( "University & Joyce", new LatLng(43.6031,-116.204915), new ArrayList<Integer>()
+                        {{ add(930); add(1030); add(1330); add(1430); add(1630); add(1800); add(1930); }} ));
+                    add(new Stop( "Front & 3rd", new LatLng(43.61028,-116.19804), new ArrayList<Integer>()
+                        {{ add(933); add(1033); add(1333); add(1433); add(1633); add(1803); add(1933); }} ));
+                    add(new Stop( "Front & 9th", new LatLng(43.61469,-116.205885), new ArrayList<Integer>()
+                        {{ add(935); add(1035); add(1335); add(1435); add(1635); add(1805); add(1935); }} ));
+                    add(new Stop( "College of Western Idaho", new LatLng(43.614984,-116.507178), new ArrayList<Integer>()
+                        {{ add(954); add(1054); add(1354); add(1454); add(1654); add(1824); add(1954); }} ));
+                }}
+        ));
     }
 
     public static Routes get(Context c){
