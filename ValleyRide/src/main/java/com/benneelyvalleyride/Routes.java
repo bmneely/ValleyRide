@@ -465,7 +465,7 @@ public class Routes {
                         {{ add(819); add(849); add(919); add(1730); add(1800); add(1836); }} ));
                 }}
         ));
-		mRoutes.add(new Route( 42, "", Color.parseColor("#4AA04E"), R.drawable.route_40_icon, R.drawable.route_40_map,
+		mRoutes.add(new Route( 42, "Meridian Limited", Color.parseColor("#4AA04E"), R.drawable.route_42_icon, R.drawable.route_42_map,
                 new ArrayList<Stop>() {{
                     add(new Stop( "Happy Day Transit Center", new LatLng(43.627012,-116.634944), new ArrayList<Integer>()
                         {{ add(630); add(730); add(1530); }} ));

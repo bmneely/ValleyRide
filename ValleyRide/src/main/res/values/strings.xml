@@ -4,6 +4,7 @@
     <string name="app_name">Valley Ride</string>
     <string name="action_settings">Settings</string>
     <string name="title_stops">Stops</string>
+    <string name="title_routes">Routes</string>
     <string name="title_route_map">Map</string>
     <string name="title_in_bound_stops">Inbound</string>
     <string name="title_out_bound_stops">Outbound</string>
